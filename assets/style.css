@@ -8,40 +8,53 @@
 
 body {
   font-family: Archivo, sans-serif;
+  font-size: 1rem;
   overflow:hidden;
   width: 60%;
   margin: auto;
+  text-align: center;
+  max-width: 620px;
+  min-width: 520px;
 }
 
 h1 {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-family: Roboto, sans-serif;
   background-color: darkslategray;
   color: white;
   text-align: center;
 }
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-family: Roboto, sans-serif;
   background-color:teal;
   color: white;
   text-align: center;
 }
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-family: Roboto, sans-serif;
-  background-color: darkcyan;
+  background-color:darkgray;
   color: white;
   text-align: center;
 }
 
 .page-section {
-  margin: 5px auto;
+  margin: 0 auto 40px;
+  background-color:lightgray;
 }
 
-#right-container{
-  float: right;
-  text-align: right;
+#new-game {
+  margin: 40px 0 10px 0;
+}
+
+#new-game button {
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  background-color:lightsalmon;
+  border-radius: 50%;
+  font-size: 1.2rem;
 }
 
 #game-right{
@@ -70,9 +83,13 @@ h3 {
   border-radius: 50%;
   font-size: 2rem;
 }
-table{
-  line-height: 35px;
-  text-align: right;
+table {
+  width: 100%;
+  text-align: center;
+  color: ;
+}
+td, th {
+  width: 50%;
 }
 
 #game-display button {
@@ -84,8 +101,9 @@ table{
   font-size: 2rem;
 }
 
-@media screen and (max-width:580px) {
+@media screen and (max-width:520px) {
   body {
     width:100%;
+    min-width:auto;
   }  
 }
