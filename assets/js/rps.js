@@ -2,7 +2,8 @@ function runRound(userInput) {
     console.log(userInput)
     let computer = generateComputerinput()
     console.log(computer)
-    console.log(didWin(userInput, computer))
+    let roundResult = getResult(userInput, computer)
+    console.log(isGameOver(roundResult))
 }
 
 function generateComputerinput() {
@@ -17,7 +18,7 @@ function generateComputerinput() {
 
 }
 
-function didWin(user, computer){
+function getResult(user, computer){
     if (user == 'rock'){
         if (computer == 'rock'){
             return 'draw'
@@ -43,4 +44,14 @@ function didWin(user, computer){
             return 'draw'
         }
     }
+}
+function isGameOver(roundResult) {
+    let userScore = document.getElementById('rounds-won').textContent
+    let computerScore = document.getElementById('rounds-lost').textContent
+    if ((roundResult == 'win' && userScore == 2) || (roundResult == 'loose' && computerScore == 2)) {
+        return true
+    } else {
+        return false
+    }
+    return userScore
 }
