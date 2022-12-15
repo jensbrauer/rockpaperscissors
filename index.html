@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
@@ -57,24 +57,25 @@
             </h3>
             <div id="game-left">
                 <div class="msg-box">ROCK</div>
-                <button>
+                <button onclick="runRound('rock')">
                     <i class="fa-solid fa-hand-fist"></i>
                 </button>
             </div>
             <div id="game-right">
                 <div class="msg-box">SCISSORS</div>
-                <button>
+                <button onclick="runRound('scissors')">
                     <i class="fa-solid fa-hand-scissors"></i>
                 </button>
             </div>
             <div id="game-center">
                 <div class="msg-box">PAPER</div>
-                <button>
+                <button onclick="runRound('paper')">
                     <i class="fa-solid fa-hand"></i>
                 </button>
             </div>
         </div>
     </main>
     <script src="https://kit.fontawesome.com/643821d095.js" crossorigin="anonymous"></script>
+    <script src="assets/js/rps.js"></script>
 </body>
 </html>
