@@ -4,9 +4,16 @@ const rockButton = document.getElementById('rock-button')
 const paperButton = document.getElementById('paper-button')
 const scissorsButton = document.getElementById('scissors-button')
 const nextRoundButton = document.getElementById('computer-right')
-
+function isRoundActive(){
+    if (nextRoundButton.style.visibility != 'visible'){
+        return true
+    } else {
+        return false
+    }
+}
 function runRound(userInput) {
-    nextRoundButton.style.visibility = 'visible';
+    if(isRoundActive()){
+        nextRoundButton.style.visibility = 'visible';
     //returns string of 'rock', 'paper' or 'scissors'
     let computerInput = generateComputerInput()
     //returns string of 'win', 'draw' or 'loose'
@@ -27,6 +34,8 @@ function runRound(userInput) {
             roundDraw(userInput, computerInput)
         )
     }
+    }
+    
 }
 
 function generateComputerInput() {
