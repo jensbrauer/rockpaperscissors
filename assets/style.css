@@ -49,12 +49,24 @@ h3 {
 }
 
 #new-game button {
+  color:white;
   text-align: center;
   height: 50px;
   width: 50px;
   background-color:lightsalmon;
   border-radius: 50%;
   font-size: 1.2rem;
+  transition: all 0.3s;
+}
+#new-game button:hover {
+  color:lightsalmon;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  background-color:white;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  border: 2px solid lightsalmon;
 }
 
 #game-right{
@@ -76,29 +88,35 @@ h3 {
   margin: auto;
 }
 
-#score-card button {
-  height: 76px;
-  width: 76px;
-  background-color: salmon;
-  border-radius: 50%;
-  font-size: 2rem;
-}
 table {
   width: 100%;
   text-align: center;
-  color: ;
 }
 td, th {
   width: 50%;
 }
 
 #game-display button {
+  color:white;
+  text-decoration: none;
   margin: 4px;
   height: 70px;
   width: 70px;
   background-color: salmon;
   border-radius: 50%;
   font-size: 2rem;
+  transition: all 0.3s;
+}
+#game-display button:hover {
+  color:salmon;
+  text-decoration: none;
+  margin: 4px;
+  height: 70px;
+  width: 70px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 2rem;
+  border: 2px solid salmon;
 }
 
 @media screen and (max-width:520px) {
