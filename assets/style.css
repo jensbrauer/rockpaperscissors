@@ -9,4 +9,61 @@
 body {
   font-family: Roboto, sans-serif;
   overflow:hidden;
+  width: 60%;
+  margin: auto;
+}
+
+.page-section {
+  border: 2px solid black;
+  margin: 5px auto;
+}
+
+#header {
+  text-align: center;
+}
+
+#score-card {
+  height: 70px;
+}
+#left-container{
+  height: 30px;
+  float: left;
+  width: 60%;
+}
+#right-container{
+  height: 30px;
+  float: right;
+  width: 40%;
+  text-align: right;
+}
+#game-right{
+  width: 33%;
+  float: right;
+}
+#game-left{
+  width: 33%;
+  float: left;
+}
+#game-center{
+  width: 33%;
+  margin: auto;
+}
+
+h1 {
+  background-color: darkslategray;
+  color: white;
+}
+h2 {
+  background-color:teal;
+  color: white;
+}
+h3 {
+  text-align: center;
+  background-color: darkcyan;
+}
+
+@media screen and (max-width:580px) {
+  body {
+    width:100%;
+  }  
 }
