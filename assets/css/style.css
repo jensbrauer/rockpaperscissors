@@ -40,7 +40,7 @@ h3 {
 }
 
 .page-section {
-  margin: 0 auto 40px;
+  margin: 0 auto 10px;
   background-color:lightgray;
 }
 
@@ -68,7 +68,13 @@ h3 {
   font-size: 1.2rem;
   border: 2px solid lightsalmon;
 }
-
+#computer-right{
+  padding: 4px;
+  width: 33%;
+  float: right;
+  text-align: center;
+  visibility: hidden;
+}
 #game-right{
   padding: 4px;
   width: 33%;
@@ -95,6 +101,28 @@ table {
 td, th {
   width: 50%;
 }
+
+#computer-display {
+  margin-top: 0;
+  color:black;
+  background-color:white;
+}
+#computer-display h3 {
+  color: darkgray;
+  background-color:white;
+}
+#computer-display button {
+  color:white;
+  text-decoration: none;
+  margin: 4px;
+  height: 70px;
+  width: 70px;
+  background-color:darkcyan;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: all 0.3s;
+}
+
 
 #game-display button {
   color:white;
