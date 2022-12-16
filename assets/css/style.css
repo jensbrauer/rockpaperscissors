@@ -137,18 +137,13 @@ td {
   background-color: salmon;
   border-radius: 50%;
   font-size: 2rem;
-  transition: all 0.3s;
+  transition: all 0.1s;
 }
 #game-display button:hover {
-  color:salmon;
-  text-decoration: none;
-  margin: 4px;
-  height: 70px;
-  width: 70px;
-  background-color: white;
-  border-radius: 50%;
-  font-size: 2rem;
-  border: 2px solid salmon;
+  margin: 0px;
+  height: 78px;
+  width: 78px;
+  font-size: 2.2rem;
 }
 #score-card {
   background-color: slategray;
