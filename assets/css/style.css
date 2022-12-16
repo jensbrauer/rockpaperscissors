@@ -37,10 +37,10 @@ h3 {
   background-color:white;
   color: darkgray;
   text-align: center;
+  margin-top: 15px;
 }
 
 .page-section {
-  margin: 0 auto 10px;
 }
 
 #new-game {
@@ -99,6 +99,11 @@ table {
 }
 td, th {
   width: 50%;
+  font-size: 0.8rem;
+}
+td {
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
 }
 
 #computer-display {
@@ -146,10 +151,17 @@ td, th {
   border: 2px solid salmon;
 }
 #score-card {
-  background-color: aqua;
+  background-color: slategray;
+  border-radius: 20px 20px 0 0;
+  color: whitesmoke;
+  letter-spacing: 1px;
 }
 #score-card h3 {
-  background-color: aqua;
+  background-color: darkslategray;
+  font-size: 1rem;
+  border-radius: 20px 20px 0 0;
+  color: whitesmoke;
+  margin-top: 0px;
 }
 
 @media screen and (max-width:520px) {
