@@ -12,6 +12,11 @@ const nextRoundButton = document.getElementById('computer-right')
 const computerMsg = document.getElementById('msg-center')
 const computerChoiceDisplay = document.getElementById('computers-choice-button')
 
+//innerHTML logo for button
+const rockLogo = `<i class="fa-solid fa-hand-fist"></i>`
+const paperLogo = `<i class="fa-solid fa-hand"></i>`
+const scissorsLogo = `<i class="fa-solid fa-hand-scissors"></i>`
+const laptopLogo = `<i class="fa-solid fa-laptop"></i>`
 
 function isRoundActive(){
     if (nextRoundButton.style.visibility != 'visible'){
@@ -98,38 +103,42 @@ function isGameOver(roundResult) {
 
 //Respons functions to update html
 function gameOverByWin(userInput, computerInput, roundResult){
-    colorButton(userInput, roundResult)
+    colorButton(userInput, roundResult, computerInput)
     userScoreHtml.textContent = Number(userScoreHtml.textContent) + 1
 
 }
 function gameOverByLoose(userInput, computerInput, roundResult){
-    colorButton(userInput, roundResult)
+    colorButton(userInput, roundResult, computerInput)
     computerScoreHtml.textContent = Number(computerScoreHtml.textContent) + 1
 
 }
 function userWonRound(userInput, computerInput, roundResult){
-    colorButton(userInput, roundResult)
+    colorButton(userInput, roundResult, computerInput)
     userScoreHtml.textContent = Number(userScoreHtml.textContent) + 1
 }
 function computerWonRound(userInput, computerInput, roundResult){
-    colorButton(userInput, roundResult)
+    colorButton(userInput, roundResult, computerInput)
     computerScoreHtml.textContent = Number(computerScoreHtml.textContent) + 1
 }
 function roundDraw(userInput, computerInput, roundResult){
-    colorButton(userInput, roundResult)
+    colorButton(userInput, roundResult, computerInput)
 }
 function startNewGame() {
     userScoreHtml.textContent = 0
     computerScoreHtml.textContent = 0
     nextRoundButton.style.visibility = 'hidden'
     rockButton.style.backgroundColor = 'salmon'
+    rockButton.style.color = 'white'
     paperButton.style.backgroundColor = 'salmon'
+    paperButton.style.color = 'white'
     scissorsButton.style.backgroundColor = 'salmon'
+    scissorsButton.style.color = 'white'
     computerChoiceDisplay.style.backgroundColor = 'darkcyan'
-    computerChoiceDisplay.innerHTML = `<i class="fa-solid fa-laptop"></i>`
+    computerChoiceDisplay.style.color = 'white'
+    computerChoiceDisplay.innerHTML = laptopLogo
 }
 
-function colorButton(userInput, roundResult){
+function colorButton(userInput, roundResult, computerInput){
     let playerButtonClicked
     if (userInput == 'rock'){
         playerButtonClicked = rockButton
@@ -137,6 +146,16 @@ function colorButton(userInput, roundResult){
         playerButtonClicked = paperButton
     } else {
         playerButtonClicked = scissorsButton
+    }
+    if (computerInput == 'rock'){
+        computerChoiceDisplay.innerHTML = rockLogo
+        console.log(computerInput)
+    } else if (computerInput == 'paper'){
+        computerChoiceDisplay.innerHTML = paperLogo
+        console.log(computerInput)
+    } else {
+        computerChoiceDisplay.innerHTML = scissorsLogo
+        console.log(computerInput)
     }
     if (roundResult == 'win') {
         computerChoiceDisplay.style.backgroundColor = 'red'
