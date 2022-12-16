@@ -126,16 +126,7 @@ function roundDraw(userInput, computerInput, roundResult){
 function startNewGame() {
     userScoreHtml.textContent = 0
     computerScoreHtml.textContent = 0
-    nextRoundButton.style.visibility = 'hidden'
-    rockButton.style.backgroundColor = 'salmon'
-    rockButton.style.color = 'white'
-    paperButton.style.backgroundColor = 'salmon'
-    paperButton.style.color = 'white'
-    scissorsButton.style.backgroundColor = 'salmon'
-    scissorsButton.style.color = 'white'
-    computerChoiceDisplay.style.backgroundColor = 'darkcyan'
-    computerChoiceDisplay.style.color = 'white'
-    computerChoiceDisplay.innerHTML = laptopLogo
+    nextRound()
 }
 
 function colorButton(userInput, roundResult, computerInput){
@@ -169,4 +160,16 @@ function colorButton(userInput, roundResult, computerInput){
         playerButtonClicked.style.backgroundColor = 'gold'
         playerButtonClicked.style.color = 'black'
     }
+}
+function nextRound() {
+    nextRoundButton.style.visibility = 'hidden'
+    rockButton.style.backgroundColor = 'salmon'
+    rockButton.style.color = 'white'
+    paperButton.style.backgroundColor = 'salmon'
+    paperButton.style.color = 'white'
+    scissorsButton.style.backgroundColor = 'salmon'
+    scissorsButton.style.color = 'white'
+    computerChoiceDisplay.style.backgroundColor = 'darkcyan'
+    computerChoiceDisplay.style.color = 'white'
+    computerChoiceDisplay.innerHTML = laptopLogo
 }

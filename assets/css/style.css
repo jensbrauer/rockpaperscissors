@@ -126,6 +126,12 @@ td {
   font-size: 2rem;
   transition: all 0.3s;
 }
+#next-round-button:hover {
+  margin: 0px;
+  height: 78px;
+  width: 78px;
+  font-size: 2.2rem;
+}
 
 
 #game-display button {
