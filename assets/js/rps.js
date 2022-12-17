@@ -6,10 +6,11 @@ const computerScoreHtml = document.getElementById('rounds-lost')
 const rockButton = document.getElementById('rock-button')
 const paperButton = document.getElementById('paper-button')
 const scissorsButton = document.getElementById('scissors-button')
+const whoWins = document.getElementById('win-loose-msg')
 
 //computer's choice display items
 const nextRoundButton = document.getElementById('computer-right')
-const computerMsg = document.getElementById('msg-center')
+const computerMsg = document.getElementById('computer-msg-center')
 const computerChoiceDisplay = document.getElementById('computers-choice-button')
 
 //innerHTML logo for button
@@ -41,21 +42,8 @@ function runRound(userInput) {
     //returns string of 'win', 'draw' or 'loose'
     let roundResult = getRoundResult(userInput, computerInput)
     //Choose an appropriate respons-function based on state of isGameOver and roundResult
-    if(isGameOver(roundResult)) {
-        if (roundResult == 'win'){
-            gameOverByWin(userInput, computerInput, roundResult)
-        } else {
-            gameOverByLoose(userInput, computerInput, roundResult)
-        }
-    } else {
-        if (roundResult == 'win'){
-            userWonRound(userInput, computerInput, roundResult)
-        } else if (roundResult == 'loose') {
-            computerWonRound(userInput, computerInput, roundResult)
-        } else (
-            roundDraw(userInput, computerInput, roundResult)
-        )
-    }
+    updateGameArea(userInput, roundResult, computerInput)
+
     }
     
 }
@@ -109,35 +97,13 @@ function isGameOver(roundResult) {
     }
 }
 
-//Respons functions to update html
-function gameOverByWin(userInput, computerInput, roundResult){
-    colorButton(userInput, roundResult, computerInput)
-    userScoreHtml.textContent = Number(userScoreHtml.textContent) + 1
-
-}
-function gameOverByLoose(userInput, computerInput, roundResult){
-    colorButton(userInput, roundResult, computerInput)
-    computerScoreHtml.textContent = Number(computerScoreHtml.textContent) + 1
-
-}
-function userWonRound(userInput, computerInput, roundResult){
-    colorButton(userInput, roundResult, computerInput)
-    userScoreHtml.textContent = Number(userScoreHtml.textContent) + 1
-}
-function computerWonRound(userInput, computerInput, roundResult){
-    colorButton(userInput, roundResult, computerInput)
-    computerScoreHtml.textContent = Number(computerScoreHtml.textContent) + 1
-}
-function roundDraw(userInput, computerInput, roundResult){
-    colorButton(userInput, roundResult, computerInput)
-}
 function startNewGame() {
     userScoreHtml.textContent = 0
     computerScoreHtml.textContent = 0
     nextRound()
 }
 
-function colorButton(userInput, roundResult, computerInput){
+function updateGameArea(userInput, roundResult, computerInput){
     let playerButtonClicked
     if (userInput == 'rock'){
         playerButtonClicked = rockButton
@@ -148,25 +114,33 @@ function colorButton(userInput, roundResult, computerInput){
     }
     if (computerInput == 'rock'){
         computerChoiceDisplay.innerHTML = rockLogo
+        computerMsg.textContent = "ROCK"
         console.log(computerInput)
     } else if (computerInput == 'paper'){
         computerChoiceDisplay.innerHTML = paperLogo
+        computerMsg.textContent = "PAPER"
         console.log(computerInput)
     } else {
         computerChoiceDisplay.innerHTML = scissorsLogo
+        computerMsg.textContent = "SCISSORS"
         console.log(computerInput)
     }
     if (roundResult == 'win') {
         computerChoiceDisplay.style.backgroundColor = 'red'
         playerButtonClicked.style.backgroundColor = 'green'
+        whoWins.textContent = "You win the round!"
+        userScoreHtml.textContent = Number(userScoreHtml.textContent) + 1
     } else if (roundResult == 'loose') {
         computerChoiceDisplay.style.backgroundColor = 'green'
         playerButtonClicked.style.backgroundColor = 'red'
+        whoWins.textContent = "Computer wins the round!"
+        computerScoreHtml.textContent = Number(computerScoreHtml.textContent) + 1
     } else {
         computerChoiceDisplay.style.backgroundColor = 'gold'
         computerChoiceDisplay.style.color = 'black'
         playerButtonClicked.style.backgroundColor = 'gold'
         playerButtonClicked.style.color = 'black'
+        whoWins.textContent = "Its a draw!"
     }
 }
 function nextRound() {
@@ -180,4 +154,6 @@ function nextRound() {
     computerChoiceDisplay.style.backgroundColor = 'darkcyan'
     computerChoiceDisplay.style.color = 'white'
     computerChoiceDisplay.innerHTML = laptopLogo
+    whoWins.textContent = "Pick your weapon to battle!"
+    computerMsg.textContent = "TBA"
 }
