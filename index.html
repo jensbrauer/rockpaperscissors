@@ -8,92 +8,106 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <header>
-        <div class="page-section" id="header">
-            <h1>
-                ROCK PAPER SCISSORS
-            </h1>
-            <h2>
-                First to three won rounds!
-            </h2>
-        </div>
-    </header>
-    <main id="game-section">
-        <div id="score-card" class="page-section">
-            <div id="vertical-pusher">
-                <table>
-                    <tr>
-                        <th colspan="2" id="table-header">
-                            SCORES
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            PLAYER
-                        </th>
-                        <th>
-                            COMPUTER
-                        </th>
-                    </tr>
-                    <tr>
-                        <td id="rounds-won">
-                            0
-                        </td>
-                        <td id="rounds-lost">
-                            0
-                        </td>
-                    </tr>
-                </table>
-                <div id="new-game">
-                    <button onclick="startNewGame()">
-                        <i class="fa-solid fa-arrow-rotate-right"></i>
-                    </button>
-                    <p>New game?</p>
+    <div id="content">
+        <header>
+            <div class="page-section" id="header">
+                <h1>
+                    ROCK PAPER SCISSORS
+                </h1>
+                <div id="instructions">
+                    <div id="instructions-left">
+                        <p>
+                            Rock beats scissors
+                            <br> Scissors beat paper
+                            <br>Paper beats rock
+                        </p>
+                    </div><div id="instructions-right">
+                        <p>
+                            Click your weapon
+                            <br> Evaluate round
+                            <br>First to three rounds!
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="game-area">
-            <div id="game-display" class="page-section">
-                <h3>
-                    Your choice
-                </h3>
-                <div id="game-left">
-                    <div id="msg-left">ROCK</div>
-                    <button id="rock-button" onclick="runRound('rock')">
-                        <i class="fa-solid fa-hand-fist"></i>
-                    </button>
-                </div>
-                <div id="game-right">
-                    <div id="msg-right">SCISSORS</div>
-                    <button id="scissors-button" onclick="runRound('scissors')">
-                        <i class="fa-solid fa-hand-scissors"></i>
-                    </button>
-                </div>
-                <div id="game-center">
-                    <div id="msg-center">PAPER</div>
-                    <button id="paper-button" onclick="runRound('paper')">
-                        <i class="fa-solid fa-hand"></i>
-                    </button>
-                </div>
-            </div>
-            <div id="computer-display" class="page-section">
-                <h3>
-                    Computer's choice
-                </h3>
-                <div id="computer-right">
-                    <div id="computer-msg-right">Next round</div>
-                    <button id="next-round-button" onclick="nextRound()">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                </div>
-                <div id="game-center">
-                    <div id="computer-msg-center">TBA</div>
-                    <button id="computers-choice-button" onclick="runRound('paper')">
-                        <i class="fa-solid fa-laptop"></i>
-                    </button>
+        </header>
+        <main id="game-section">
+            <div id="score-card" class="page-section">
+                <div id="vertical-pusher">
+                    <table>
+                        <tr>
+                            <th colspan="2" id="table-header">
+                                SCORES
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                PLAYER
+                            </th>
+                            <th>
+                                COMPUTER
+                            </th>
+                        </tr>
+                        <tr>
+                            <td id="rounds-won">
+                                0
+                            </td>
+                            <td id="rounds-lost">
+                                0
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="new-game">
+                        <button onclick="startNewGame()">
+                            <i class="fa-solid fa-arrow-rotate-right"></i>
+                        </button>
+                        <p>New game?</p>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div id="game-area">
+                <div id="game-display" class="page-section">
+                    <h3>
+                        Your choice
+                    </h3>
+                    <div id="game-left">
+                        <div id="msg-left">ROCK</div>
+                        <button id="rock-button" onclick="runRound('rock')">
+                            <i class="fa-solid fa-hand-fist"></i>
+                        </button>
+                    </div>
+                    <div id="game-right">
+                        <div id="msg-right">SCISSORS</div>
+                        <button id="scissors-button" onclick="runRound('scissors')">
+                            <i class="fa-solid fa-hand-scissors"></i>
+                        </button>
+                    </div>
+                    <div id="game-center">
+                        <div id="msg-center">PAPER</div>
+                        <button id="paper-button" onclick="runRound('paper')">
+                            <i class="fa-solid fa-hand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="computer-display" class="page-section">
+                    <h3>
+                        Computer's choice
+                    </h3>
+                    <div id="computer-right">
+                        <div id="computer-msg-right">Next round</div>
+                        <button id="next-round-button" onclick="nextRound()">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div id="game-center">
+                        <div id="computer-msg-center">TBA</div>
+                        <button id="computers-choice-button" onclick="runRound('paper')">
+                            <i class="fa-solid fa-laptop"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </div>
     </main>
     <script src="https://kit.fontawesome.com/643821d095.js" crossorigin="anonymous"></script>
     <script src="assets/js/rps.js"></script>

@@ -7,37 +7,60 @@
 }
 
 body {
+  width:100%;
+  background-color:burlywood;
+  overflow:hidden;
+}
+
+#content {
   font-family: Archivo, sans-serif;
   font-size: 1rem;
-  overflow:hidden;
   width: 60%;
   margin: auto;
   text-align: center;
   max-width: 620px;
   min-width: 520px;
+  overflow:hidden;
 }
 
 h1 {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-family: Roboto, sans-serif;
   background-color: darkslategray;
   color: white;
   text-align: center;
 }
 h2 {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-family: Roboto, sans-serif;
   background-color:teal;
   color: white;
   text-align: center;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-family: Roboto, sans-serif;
-  background-color:white;
   color: darkgray;
   text-align: left;
-  border-bottom: 1px solid black;
+  padding: 5px 5px 5px 10px;
+}
+
+#instructions {
+  width: 100%;
+  background-color: aquamarine;
+}
+#instructions-left {
+  width: 50%;
+  text-align: left;
+  display: inline-block;
+}
+#instructions-right {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+p{
+  padding: 5px;
 }
 
 
@@ -74,7 +97,7 @@ h3 {
 
 #score-card {
   margin: 10px 0 10px 0;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 100%;
   height: 100px;
   color: black;
@@ -94,20 +117,22 @@ table {
   float: left;
   width: 60%;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 0 2px 0 2px;
+  border-spacing: 0;
 }
 #table-header {
   font-size: 1.3rem;
-  background-color: cadetblue;
-  border-radius: 8px 8px 0 0 ;
+  border-radius: 5px 5px 0 0 ;
 }
 td, th {
   width: 50%;
   font-size: 0.8rem;
+  padding: 2px 0 2px 0;
 }
 th {
-  background-color: blue;
+  background-color: cadetblue;
+  border: 1px solid darkcyan;
 }
 td {
   font-size: 1.5rem;
@@ -118,7 +143,11 @@ td {
 
 
 
-#game-area{
+#game-display {
+  background-color: aqua;
+  margin: 5px 0;
+  border-radius: 0 40px 40px 40px;
+  border: 1px solid black;
 }
 #game-right{
   padding: 4px;
@@ -166,11 +195,14 @@ td {
 #computer-display {
   margin-top: 0;
   color:black;
-  background-color:white;
+  background-color: aquamarine;
+  border-radius: 40px 0 40px 40px;
+  border: 1px solid black;
 }
 #computer-display h3 {
   color: darkgray;
-  background-color:white;
+  text-align: right;
+  padding-right: 10px;
 }
 #computer-display button {
   color:white;
@@ -204,9 +236,9 @@ td {
 
 
 
-@media screen and (max-width:520px) {
-  body {
-    width:100%;
+@media screen and (max-width:528px) {
+  #content {
+    width:98%;
     min-width:280px;
   }  
 }
