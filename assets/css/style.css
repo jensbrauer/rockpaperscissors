@@ -36,15 +36,13 @@ h3 {
   font-family: Roboto, sans-serif;
   background-color:white;
   color: darkgray;
-  text-align: center;
-  margin-top: 15px;
+  text-align: left;
+  border-bottom: 1px solid black;
 }
 
-.page-section {
-}
 
 #new-game {
-  margin: 20px 0 10px 0;
+  float: right;
 }
 
 #new-game button {
@@ -67,12 +65,48 @@ h3 {
   font-size: 1.2rem;
   border: 2px solid lightsalmon;
 }
-#computer-right{
-  padding: 4px;
-  width: 33%;
-  float: right;
+
+
+
+
+#left-container {
+  width: 100%;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#score-card {
+  border-radius: 20px 20px 0 0;
+  color: black;
+  letter-spacing: 1px;
+  background-color: beige;
+}
+#score-card h3 {
+  background-color: black;
+  font-size: 1rem;
+  border-radius: 20px 20px 0 0;
+  color: whitesmoke;
+  margin-top: 0px;
+}
+table {
+  float: left;
+  width: 60%;
   text-align: center;
-  visibility: hidden;
+}
+td, th {
+  width: 30%;
+  font-size: 0.8rem;
+}
+td {
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+}
+
+
+
+
+
+#game-area{
 }
 #game-right{
   padding: 4px;
@@ -90,21 +124,32 @@ h3 {
   padding: 4px;
   text-align: center;
   width: 33%;
+  height: 104px;
   margin: auto;
 }
+#game-display button {
+  color:white;
+  text-decoration: none;
+  margin: 4px;
+  height: 70px;
+  width: 70px;
+  background-color: salmon;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: all 0.1s;
+}
+#game-display button:hover {
+  margin: 0px;
+  height: 78px;
+  width: 78px;
+  font-size: 2.2rem;
+}
 
-table {
-  width: 100%;
-  text-align: center;
-}
-td, th {
-  width: 30%;
-  font-size: 0.8rem;
-}
-td {
-  font-size: 1.5rem;
-  font-family: Roboto, sans-serif;
-}
+
+
+
+
+
 
 #computer-display {
   margin-top: 0;
@@ -126,6 +171,18 @@ td {
   font-size: 2rem;
   transition: all 0.3s;
 }
+
+#computer-right{
+  padding: 4px;
+  width: 33%;
+  float: right;
+  text-align: center;
+  visibility: hidden;
+}
+
+
+
+
 #next-round-button:hover {
   margin: 0px;
   height: 78px;
@@ -133,40 +190,11 @@ td {
   font-size: 2.2rem;
 }
 
-#game-display button {
-  color:white;
-  text-decoration: none;
-  margin: 4px;
-  height: 70px;
-  width: 70px;
-  background-color: salmon;
-  border-radius: 50%;
-  font-size: 2rem;
-  transition: all 0.1s;
-}
-#game-display button:hover {
-  margin: 0px;
-  height: 78px;
-  width: 78px;
-  font-size: 2.2rem;
-}
-#score-card {
-  border-radius: 20px 20px 0 0;
-  color: black;
-  letter-spacing: 1px;
-  border-bottom: 1px solid black;
-}
-#score-card h3 {
-  background-color: black;
-  font-size: 1rem;
-  border-radius: 20px 20px 0 0;
-  color: whitesmoke;
-  margin-top: 0px;
-}
+
 
 @media screen and (max-width:520px) {
   body {
     width:100%;
-    min-width:auto;
+    min-width:280px;
   }  
 }
