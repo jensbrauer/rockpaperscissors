@@ -1,6 +1,7 @@
 //score card items
 const userScoreHtml = document.getElementById('rounds-won')
 const computerScoreHtml = document.getElementById('rounds-lost')
+const scoreCardHeader = document.getElementById('table-header')
 
 //game area display items
 const rockButton = document.getElementById('rock-button')
@@ -28,12 +29,13 @@ function instructionsToggle(num) {
 }
 
 function isRoundActive(){
-    if (nextRoundButton.style.visibility != 'visible'){
+    if (computerMsg.textContent == 'TBA'){
         return true
     } else {
         return false
     }
 }
+
 function runRound(userInput) {
     if(isRoundActive()){
     //returns string of 'rock', 'paper' or 'scissors'
@@ -108,6 +110,7 @@ function startNewGame() {
     computerScoreHtml.textContent = 0
     nextRound()
     document.getElementById('game-area').style.filter = "grayscale(0%)";
+    scoreCardHeader.textContent = 'SCORES'
 }
 
 function updateGameArea(userInput, roundResult, computerInput){
@@ -169,9 +172,11 @@ function gameIsOver(roundResult) {
     if (roundResult == 'win'){
         document.getElementById('game-area').style.filter = "grayscale(60%)";
         document.getElementById('score-table').style.backgroundColor = 'green'
+        scoreCardHeader.textContent = 'You won the game!'
     }
     else {
         document.getElementById('game-area').style.filter = "grayscale(60%)";
         document.getElementById('score-table').style.backgroundColor = 'red'
+        scoreCardHeader.textContent = 'Computer won the game!'
     }
 }
