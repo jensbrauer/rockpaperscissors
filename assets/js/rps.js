@@ -18,6 +18,14 @@ const paperLogo = `<i class="fa-solid fa-hand"></i>`
 const scissorsLogo = `<i class="fa-solid fa-hand-scissors"></i>`
 const laptopLogo = `<i class="fa-solid fa-laptop"></i>`
 
+function instructionsToggle(num) {
+    if (num){
+        document.getElementById('first-instructions').style.visibility = 'hidden'
+    } else {
+        document.getElementById('first-instructions').style.visibility = 'visible'
+    }
+}
+
 function isRoundActive(){
     if (nextRoundButton.style.visibility != 'visible'){
         return true

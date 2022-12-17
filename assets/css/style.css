@@ -12,6 +12,22 @@ body {
   overflow:hidden;
 }
 
+#first-instructions {
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  bottom: 0px;
+  left: 15%;
+  background-color: aqua;
+  width: 70%;
+}
+#close-instructions {
+  background: none;
+  padding: 10px;
+  font-size: 2rem;
+  float: right;
+}
+
 #content {
   font-family: Archivo, sans-serif;
   font-size: 1rem;
@@ -47,21 +63,11 @@ h3 {
 
 #instructions {
   width: 100%;
-  background-color: aquamarine;
+  font-size: 1.5rem;
+  color: blue;
 }
-#instructions-left {
-  width: 50%;
-  text-align: left;
-  display: inline-block;
-}
-#instructions-right {
-  width: 50%;
-  float: right;
-  text-align: right;
-}
-p{
-  padding: 5px;
-}
+
+
 
 
 #new-game {

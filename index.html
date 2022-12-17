@@ -8,27 +8,19 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
+    <div id="first-instructions">
+        <button id="close-instructions" onclick="instructionsToggle(true)">Close <i class="fa-solid fa-xmark"></i></button>
+        <p>hello</p>
+    </div>
     <div id="content">
         <header>
             <div class="page-section" id="header">
                 <h1>
                     ROCK PAPER SCISSORS
                 </h1>
-                <div id="instructions">
-                    <div id="instructions-left">
-                        <p>
-                            Rock beats scissors
-                            <br> Scissors beat paper
-                            <br>Paper beats rock
-                        </p>
-                    </div><div id="instructions-right">
-                        <p>
-                            Click your weapon
-                            <br> Evaluate round
-                            <br>First to three rounds!
-                        </p>
-                    </div>
-                </div>
+                <button id="instructions" onclick="instructionsToggle(false)"">
+                    INFO <i class="fa-solid fa-circle-info"></i>
+                </button>
             </div>
         </header>
         <main id="game-section">
