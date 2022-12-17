@@ -9,8 +9,17 @@
 </head>
 <body>
     <div id="first-instructions">
-        <button id="close-instructions" onclick="instructionsToggle(true)">Close <i class="fa-solid fa-xmark"></i></button>
-        <p>hello</p>
+        <button id="close-instructions" onclick="instructionsToggle(true)">
+            <i class="fa-solid fa-xmark"></i> Close Instructions</button>
+        <p>Welcome to play a game of ROCK, PAPER, SCISSORS.
+            <br><br>In this game, you get to choose a weapon (Rock, paper or scissors)
+            <br>You choose by clicking on the red icons in the players choice area.
+            <br>The computer will generate its choice of weapon for a counter attack.
+            <br><br>The one of you with the strongest weapon wins the round.
+            <br>This will generate a point in the score area.
+            <br><br>The one who gets to three points first, wins the game!
+            <br><br> Good luck!
+        </p>
     </div>
     <div id="content">
         <header>
@@ -18,8 +27,8 @@
                 <h1>
                     ROCK PAPER SCISSORS
                 </h1>
-                <button id="instructions" onclick="instructionsToggle(false)"">
-                    INFO <i class="fa-solid fa-circle-info"></i>
+                <button id="instructions" onclick="instructionsToggle(false)">
+                    Instructions <i class="fa-solid fa-circle-info"></i>
                 </button>
             </div>
         </header>
@@ -81,22 +90,25 @@
                         </button>
                     </div>
                 </div>
+                <h4 id="win-loose-msg">Pick your weapon to battle!</h4>
                 <div id="computer-display" class="page-section">
-                    <h3>
-                        Computer's choice
-                    </h3>
+                    <div id="game-left">
+                    </div>
                     <div id="computer-right">
-                        <div id="computer-msg-right">Next round</div>
                         <button id="next-round-button" onclick="nextRound()">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
+                        <div id="computer-msg-right">Next round</div>
                     </div>
-                    <div id="game-center">
-                        <div id="computer-msg-center">TBA</div>
+                    <div id="computer-center">
                         <button id="computers-choice-button" onclick="runRound('paper')">
                             <i class="fa-solid fa-laptop"></i>
                         </button>
+                        <div id="computer-msg-center">TBA</div>
                     </div>
+                    <h3>
+                        Computer's choice
+                    </h3>
                 </div>
             </div>
     </div>
