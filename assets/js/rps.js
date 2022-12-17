@@ -36,14 +36,18 @@ function isRoundActive(){
 }
 function runRound(userInput) {
     if(isRoundActive()){
-        nextRoundButton.style.visibility = 'visible';
     //returns string of 'rock', 'paper' or 'scissors'
     let computerInput = generateComputerInput()
     //returns string of 'win', 'draw' or 'loose'
     let roundResult = getRoundResult(userInput, computerInput)
     //Choose an appropriate respons-function based on state of isGameOver and roundResult
-    updateGameArea(userInput, roundResult, computerInput)
-
+    if (isGameOver(roundResult)) {
+        updateGameArea(userInput, roundResult, computerInput)
+        gameIsOver(roundResult)
+    } else {
+        nextRoundButton.style.visibility = 'visible';
+        updateGameArea(userInput, roundResult, computerInput)
+    }
     }
     
 }
@@ -98,9 +102,12 @@ function isGameOver(roundResult) {
 }
 
 function startNewGame() {
+    
+    document.getElementById('score-table').style.backgroundColor = '#333333'
     userScoreHtml.textContent = 0
     computerScoreHtml.textContent = 0
     nextRound()
+    document.getElementById('game-area').style.filter = "grayscale(0%)";
 }
 
 function updateGameArea(userInput, roundResult, computerInput){
@@ -156,4 +163,15 @@ function nextRound() {
     computerChoiceDisplay.innerHTML = laptopLogo
     whoWins.textContent = "Pick your weapon to battle!"
     computerMsg.textContent = "TBA"
+}
+
+function gameIsOver(roundResult) {
+    if (roundResult == 'win'){
+        document.getElementById('game-area').style.filter = "grayscale(60%)";
+        document.getElementById('score-table').style.backgroundColor = 'green'
+    }
+    else {
+        document.getElementById('game-area').style.filter = "grayscale(60%)";
+        document.getElementById('score-table').style.backgroundColor = 'red'
+    }
 }
