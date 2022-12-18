@@ -32,7 +32,7 @@ body {
 }
 #close-instructions {
   font-family: Roboto, sans-serif;
-  color: #EEEEEE;
+  color:yellow;
   background: none;
   padding: 10px;
   font-size: 2rem;
@@ -80,9 +80,12 @@ h3 {
   width: 100%;
   padding: 2px;
   font-size: 1.2rem;
-  color: #333333;
+  color:#333333;
   background-color: #EEEEEE;
   transition: all 0.2s;
+}
+#instructions-logo{
+  color: coral;
 }
 #instructions:hover {
   color: #EEEEEE;
