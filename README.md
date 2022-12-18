@@ -1,49 +1,55 @@
-# Love Running
+# Rock Paper Scissors
 
-In this section, you will include one or two paragraphs providing an overview of your project. Essentially, this part is your sales pitch. At this stage, you should have a name for your project so use it! Don’t introduce the project as a Portfolio project for the diploma. In this section, describe what the project hopes to accomplish, who it is intended to target and how it will be useful to the target audience. 
+Rock paper scissors is a site that aims to provide users with a cheat safe way of playing rock paper scissors. Mental games and trying to cheat through delaying the reveal of the chosen weapon are effectively eradicated when playing a pseudo-random algorithm. Users who need to settle a score or make a choice can use the website and rely on true 50/50 probability, while still having a fun and colored experience.
 
-For example; Love Running is a site that hopes to help keep people motivated to meet up for runs on a regular basis in Dublin, Ireland. The site will be targeted toward runners who are looking for a way to socialise and keep themselves fit. Love Running will be useful for runners to see exactly when and where they should be to join the running club. 
+With the sites colorful responses and screenupdates, users can hover over the screen together and bite their nails as they face off with computerized lady luck.
 
-![Responsice Mockup](https://github.com/lucyrush/readme-template/blob/master/media/love_running_mockup.png)
+![Responsice Mockup](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/screenmockup.PNG)
 
 ## Features 
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+  - The site is built in greyscale with only interactive elements displayed in color, in order to effectively direct the users attention to features that can be activated.
 
 ### Existing Features
 
-- __Navigation Bar__
+- __The landing page instructions__
 
-  - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Gallery and Sign Up page and is identical in each page to allow for easy navigation.
-  - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
+  - First of users are presented with instructions on the rules of rock, paper, scissors, as well as the gameflow on this particular site. 
+  - This ensures that all users enter the game on equal terms and understanding of how a winner/looser will be determined.
+  - The "close-instructions" button is displayed in yellow to show users how to proceed to the game when ready.
+  
 
-![Nav Bar](https://github.com/lucyrush/readme-template/blob/master/media/love_running_nav.png)
+![Landing Page](#)
 
-- __The landing page image__
+- __Header__
 
-  - The landing includes a photograph with text overlay to allow the user to see exactly which location this site would be applicable to. 
-  - This section introduces the user to Love Running with an eye catching animation to grab their attention
+  - The header is built to effectively display the purpose of this one-page site with the title ROCK PAPER SCISSORS clearly stated in black and white. 
+  - It also provides a small button with a link back to the Instructions. This is mainly in black and white theme not to draw unnecessary attention, but with an orange info-icon and an on-hover css feature in order to convey the interactivity to the user.
 
-![Landing Page](https://github.com/lucyrush/readme-template/blob/master/media/love_running_landing.png)
+![Header](#)
 
-- __Club Ethos Section__
+- __Score Card__
 
-  - The club ethos section will allow the user to see the benefits of joining the Love Running meetups, as well as the benefits of running overall. 
-  - This user will see the value of signing up for the Love Running meetups. This should encourage the user to consider running as their form of exercise. 
+  - The Score Card section allows the user to monitor the progression of the game. It's default styling is in greyscale, and the table displaying the scores light up in green or red color when game is over to alert the user to the end results.
+  - Next to the score table is an interactive element colored in a pale orange color that enables the user to start a new game at any point in the game flow.
 
-![Club Ethos](https://github.com/lucyrush/readme-template/blob/master/media/love_running_ethos.png)
+![Score Card](#)
 
-- __Meetup Times section__
+- __Game Section__ 
 
-  - This section will allow the user to see exactly when the meetups will happen, where they will be located and how long the run will be in kilometers. 
-  - This section will be updated as these times change to keep the user up to date. 
+  - The game section is where users can interact with the game flow itself.
+#### Players Section
+  - Clearly displaying the interactive elements in another warm orange color that expand on hover. The functionality of the interactive elements are also clarified with associated text-elements and icons that should remind anyone familiar with the game of the hand signs normaly used in real life. Furthermore, the headings guide the user to understand where their choice should be inputed.
 
-![Meetup Times](https://github.com/lucyrush/readme-template/blob/master/media/love_running_times.png)
+#### Message line
+  - To the bottom right of the game-section, a "next-round" button pops at the end of a round before game is over. In order to allow the user to initiate next round at will instead of automatically.
+  
+#### Computers Section
+  - Underneath, a computers choice section is interconnected but with a colder blue/green color on no on-hover effect. It is displayed with the laptop icon and a "To Be Announced" text tag as well as a "Computers Choice", to show the user that the oponent's(the computer's) respons will be displayed there.
+  - To the bottom right of the game-section, a "next-round" button pops at the end of a round before game is over. In order to allow the user to initiate next round at will instead of automatically.
 
-- __The Footer__ 
-
-  - The footer section includes links to the relevant social media sites for Love Running. The links will open to a new tab to allow easy navigation for the user. 
-  - The footer is valuable to the user as it encourages them to keep connected via social media
+  
+  
 
 ![Footer](https://github.com/lucyrush/readme-template/blob/master/media/love_running_footer.png)
 
@@ -67,6 +73,8 @@ In addition, you may also use this section to discuss plans for additional featu
 ### Features Left to Implement
 
 - Another feature idea
+- Warning message to "start new game button"
+
 
 ## Testing 
 
