@@ -20,6 +20,7 @@ const paperLogo = `<i class="fa-solid fa-hand"></i>`;
 const scissorsLogo = `<i class="fa-solid fa-hand-scissors"></i>`;
 const laptopLogo = `<i class="fa-solid fa-laptop"></i>`;
 
+//Called to close or open instructions popup
 function instructionsToggle(num) {
     if (num){
         document.getElementById('first-instructions').style.visibility = 'hidden';
@@ -28,6 +29,7 @@ function instructionsToggle(num) {
     }
 }
 
+//Called from runRound() in order to se if the game scenario allows for user input
 function isRoundActive(){
     if (computerMsg.textContent == 'TBA'){
         return true;
@@ -36,6 +38,7 @@ function isRoundActive(){
     }
 }
 
+//Main game function activated by player making a choice between rock paper or scissors
 function runRound(userInput) {
     if(isRoundActive()){
     //returns string of 'rock', 'paper' or 'scissors'
@@ -54,6 +57,7 @@ function runRound(userInput) {
     
 }
 
+//Called by runRound() and generates the computers choice of rock paper och scissors
 function generateComputerInput() {
     let calc = Math.floor(Math.random() * (3));
     if (calc == 0){
@@ -65,6 +69,7 @@ function generateComputerInput() {
     }
 }
 
+//Called by runRound() in order to determine the outcome of the round
 function getRoundResult(user, computer){
     if (user == 'rock'){
         if (computer == 'rock'){
@@ -93,6 +98,7 @@ function getRoundResult(user, computer){
     }
 }
 
+//Called by runRound() in order to determine if a player reached 3 points and game is over
 function isGameOver(roundResult) {
     let userScore = userScoreHtml.textContent;
     let computerScore = computerScoreHtml.textContent;
@@ -103,6 +109,7 @@ function isGameOver(roundResult) {
     }
 }
 
+//called onclick from the scorecard in order to reset scorecard and game area to start settings
 function startNewGame() {
     document.getElementById('score-table').style.backgroundColor = '#333333';
     userScoreHtml.textContent = 0;
@@ -112,6 +119,7 @@ function startNewGame() {
     scoreCardHeader.textContent = 'SCORES';
 }
 
+//Called by runRound() in order to update gamearea based on the round results
 function updateGameArea(userInput, roundResult, computerInput){
     let playerButtonClicked;
     if (userInput == 'rock'){
@@ -152,6 +160,8 @@ function updateGameArea(userInput, roundResult, computerInput){
         whoWins.textContent = "Its a draw!";
     }
 }
+
+//Resets game area to initial style to initiate new round
 function nextRound() {
     nextRoundButton.style.visibility = 'hidden';
     rockButton.style.backgroundColor = 'salmon';
@@ -167,6 +177,7 @@ function nextRound() {
     computerMsg.textContent = "TBA";
 }
 
+//called by runRound() if Game Over scenario should be displayed
 function gameIsOver(roundResult) {
     if (roundResult == 'win'){
         document.getElementById('game-area').style.filter = "grayscale(60%)";
