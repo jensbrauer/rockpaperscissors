@@ -51,17 +51,17 @@ With the sites colorful responses and screenupdates, users can hover over the sc
 
 #### Computers Choice Section
   - Underneath, a computers choice section is interconnected but with a colder blue/green color on no on-hover effect. It is displayed with the laptop icon and a "To Be Announced" text tag as well as a "Computers Choice", to show the user that the oponent's(the computer's) respons will be displayed there.
-  - To the bottom right of the game-section, a "next-round" button pops at the end of a round before game is over. In order to allow the user to initiate next round at will instead of automatically.
-
 ![Computers Choice](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/computerschoice.PNG)
+
+  - To the bottom right of the game-section, a "next-round" button pops at the end of a round before game is over. In order to allow the user to initiate next round at will instead of automatically.
 ![Next Round](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/nextround.PNG)
 
 #### Game Flow Scenarios
   - At the end of each round, when choises are evaluated. The button that the player clicked and chose, as well at the pseudo-button for the computer choice display, will light up in green, yellow or red colors based on the results of the round. I. e. The loosers choice turns red, the winners choice turns green and at a draw - both are colored in yellow.
-  - At the end of the game (game over scenario), the complete gamesection is grayscaled to 70% in order to more effectively lead the users attention to the Score Card section where game results are displayed. Furthermore, no "next round" button is displayed and instead, "Start new game" button must be clicked in order to activate more game play.
+  ![Round Over](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/roundend.PNG)
 
-![Game Section](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/gamearea.PNG)
-![Game Over Scenario](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/gameover.PNG)
+  - At the end of the game (game over scenario), the complete gamesection is grayscaled to 70% in order to more effectively lead the users attention to the Score Card section where game results are displayed. Furthermore, no "next round" button is displayed and instead, "Start new game" button must be clicked in order to activate more game play.
+  ![Game Over Scenario](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/gameover.PNG)
 
 For some/all of your features, you may choose to reference the specific project files that implement them.
 
