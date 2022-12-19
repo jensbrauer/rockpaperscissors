@@ -123,7 +123,7 @@ The site was tested on the following web browser
 Lighthouse report was run multiple times with varying performance score as low as 83.
 Performance issues are unnoticed in manual testing and therefore unattended to.
 
-![Landing Page](#)
+![Lighthouse Report](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/lighthouse.PNG)
 
 
 ### Unfixed Bugs
