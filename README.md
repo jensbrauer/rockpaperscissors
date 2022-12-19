@@ -86,6 +86,12 @@ The site was tested on the following devices
 - Iphone SE 2022
 - HP Elitebook 13"
 
+The site was tested on the following web browser
+- Mozilla Firefox
+- Windows Edge
+- Google Chrome
+- Safari
+
 No Bugs or problems was detected in regards to the responsiveness of the website.
 
 
@@ -96,7 +102,12 @@ No Bugs or problems was detected in regards to the responsiveness of the website
 - CSS
   - [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjensbrauer.github.io%2Frockpaperscissors%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv#css) highlighted no errors in the CSS.
 - JavaScript
-  - [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjensbrauer.github.io%2Frockpaperscissors%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv#css) highlighted no errors in the CSS.
+  - [JSHint](https://jshint.com/) Returned 24 warnings about the JavaScript code. These warnings were all one of the following warnings;
+    - 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+    - 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+    - 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+  - In the Configure tab of JSHint under "Assume", I clicked "New JavaScript features (ES6)" which got rid of the warnings. I. e. this website assumes that user browsers support ES6.
+  
 
 ### Lighthouse Report
 
@@ -108,7 +119,7 @@ Performance issues are unnoticed in manual testing an unattended to.
 
 ### Unfixed Bugs
 
-Performance issues caught by lighthouse are unattended to.
+- Performance issues caught by lighthouse are unattended to.
 
 - Another issue is the the next round button that renders weirdly.
   - When clicked and JS function is hiding it by changing element.style.visibility = 'hidden',
