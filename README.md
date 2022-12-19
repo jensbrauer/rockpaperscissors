@@ -98,18 +98,32 @@ No Bugs or problems was detected in regards to the responsiveness of the website
 - JavaScript
   - [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjensbrauer.github.io%2Frockpaperscissors%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv#css) highlighted no errors in the CSS.
 
+### Lighthouse Report
+
+Lighthouse report was run multiple times with varying performance score as low as 83.
+Performance issues are unnoticed in manual testing an unattended to.
+
+![Landing Page](#)
+
+
 ### Unfixed Bugs
 
-You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed. 
+Performance issues caught by lighthouse are unattended to.
+
+- Another issue is the the next round button that renders weirdly.
+  - When clicked and JS function is hiding it by changing element.style.visibility = 'hidden',
+it does not instantly disappear but fades a little and then instantly disappears.
+With another method, this could probably be solved better.
 
 ## Deployment
 
 The finalized version of the website was deployed on GitHub pages, step by step;
 
-Navigate to to the github repository 'Settings' tab
-Select 'Pages' in the left side menu
-Under "Build and deployment" - "Branch"; Select 'Main' in the 'Select branch' drop-down menu.
-Click Save 
+- Navigate to to the github repository 'Settings' tab
+- Select 'Pages' in the left side menu
+- Under "Build and deployment" - "Branch"; Select 'Main' in the 'Select branch' drop-down menu.
+- Click Save 
+
 A green banner displays with a live link when deployment and build is finished.
 
 This is the live link for the deployed page - https://jensbrauer.github.io/rockpaperscissors/
