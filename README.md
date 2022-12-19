@@ -134,7 +134,7 @@ Performance issues are unnoticed in manual testing and therefore unattended to.
 
 - Performance issues caught by lighthouse are unattended to.
 
-- An unwanted feature is the the next round button rendering weirdly.
+- An unwanted feature is that the "next round"-button renders weirdly.
   - When clicked, JS function is hiding it by changing element.style.visibility = 'hidden', it does not instantly disappear but fades a little and then instantly disappears. With another method, this could probably be solved better.
 
 ## Deployment
@@ -144,9 +144,9 @@ Performance issues are unnoticed in manual testing and therefore unattended to.
 - Navigate to to the github repository 'Settings' tab
 - Select 'Pages' in the left side menu
 - Under "Build and deployment" - "Branch"; Select 'Main' in the 'Select branch' drop-down menu.
-- Click Save 
+- Click Save
+- A green banner displays with a live link when deployment and build is finished.
 
-A green banner displays with a live link when deployment and build is finished.
 This is the live link for the deployed page - https://jensbrauer.github.io/rockpaperscissors/
 
 
