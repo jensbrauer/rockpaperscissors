@@ -80,49 +80,48 @@ With the sites colorful responses and screenupdates, users can hover over the sc
 - Readability was tested and confirmed to function as intended
 - Responsiveness was tested and confirmed to function as intended
 
-- __CSS bugs found and addressed__
-  - The button with id="paper-button" in the players choice area caused the whole players area to expand downwards on hover.
-    - The div with id="game-center" was given a fixed height, large enough to fit content.
-  - The Computer Display pseudo button in the Computers choice area was slightly pushed to the left and did not align with middle button of Players Choice area.
-    - An empty div with the same CSS as the left Choice Button area in the Players Choice area in order to push it into alignment.
-- __JS bugs found and addressed:__
-  - The "next round"-button appeared even though Game scenario was "Game Over".
-    - Corrected in the js file by adding element.style.visibility = 'hidden' to function gameIsOver()
-  - The "Players Choice" buttons remained clickable in Game Over scenario.
-    - The function isGameOver() was updated to use element.textContent = 'TBA' on the computerMsg variable referencing the div id="computer-msg-center", in order to determin whether or round was played or finished.
-- __HTML bugs found and addressed:__
-  - No players choice buttons would fire onclick functions until "new game" button was clicked.
-    - The original html element did not contain the correct element.textContent that the condition looked for in js function isRoundActive(). It was updated and bug was corrected.
+#### CSS bugs found and addressed
+- The button with id="paper-button" in the players choice area caused the whole players area to expand downwards on hover.
+  - The div with id="game-center" was given a fixed height, large enough to fit content.
+- The Computer Display pseudo button in the Computers choice area was slightly pushed to the left and did not align with middle button of Players Choice area.
+  - An empty div with the same CSS as the left Choice Button area in the Players Choice area in order to push it into alignment.
+#### JS bugs found and addressed:
+- The "next round"-button appeared even though Game scenario was "Game Over".
+  - Corrected in the js file by adding element.style.visibility = 'hidden' to function gameIsOver()
+- The "Players Choice" buttons remained clickable in Game Over scenario.
+  - The function isGameOver() was updated to use element.textContent = 'TBA' on the computerMsg variable referencing the div id="computer-msg-center", in order to determin whether or round was played or finished.
+#### HTML bugs found and addressed:
+- No players choice buttons would fire onclick functions until "new game" button was clicked.
+  - The original html element did not contain the correct element.textContent that the condition looked for in js function isRoundActive(). It was updated and bug was corrected.
 
 #### Live link was shared with friends and no further bugs or problems was detected.
 
-- __The site was tested on the following devices__
-  - Android Oneplus 7
-  - Iphone SE 2022
-  - HP Elitebook 13"
+#### The site was tested on the following devices
+- Android Oneplus 7
+- Iphone SE 2022
+- HP Elitebook 13"
 
-- __The site was tested on the following web browser__
-  - Mozilla Firefox
-  - Windows Edge
-  - Google Chrome
-  - Safari
+#### The site was tested on the following web browser
+- Mozilla Firefox
+- Windows Edge
+- Google Chrome
+- Safari
 
 
 ### Validator Testing 
 
-- __HTML__
-  - [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjensbrauer.github.io%2Frockpaperscissors%2F) highlighted no errors in the HTML.
-- __CSS__
-  - [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjensbrauer.github.io%2Frockpaperscissors%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv#css) highlighted no errors in the CSS.
-- __JavaScript__
-  - [JSHint](https://jshint.com/) Returned 24 warnings about the JavaScript code. These warnings were all one of the following warnings;
-    - 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-    - 'template literal syntax' is only available in ES6 (use 'esversion: 6').
-    - 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-  - In the Configure tab of JSHint under "Assume", I clicked "New JavaScript features (ES6)" which got rid of the warnings. I. e. this website assumes that user browsers support ES6.
-  
+#### HTML
+- [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjensbrauer.github.io%2Frockpaperscissors%2F) highlighted no errors in the HTML.
+#### CSS
+- [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjensbrauer.github.io%2Frockpaperscissors%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv#css) highlighted no errors in the CSS.
+#### JavaScript
+- [JSHint](https://jshint.com/) Returned 24 warnings about the JavaScript code. These warnings were all one of the following warnings;
+  - 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+  - 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+  - 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- In the Configure tab of JSHint under "Assume", I clicked "New JavaScript features (ES6)" which got rid of the warnings. I. e. this website assumes that user browsers support ES6.
 
-### Lighthouse Report
+#### Lighthouse Report
 
 Lighthouse report was run multiple times with varying performance score as low as 83.
 Performance issues are unnoticed in manual testing and therefore unattended to.
@@ -140,11 +139,11 @@ Performance issues are unnoticed in manual testing and therefore unattended to.
 ## Deployment
 
 ### The finalized version of the website was deployed on GitHub pages.
-- __Step by step:__
-  - Navigate to to the github repository 'Settings' tab
-  - Select 'Pages' in the left side menu
-  - Under "Build and deployment" - "Branch"; Select 'Main' in the 'Select branch' drop-down menu.
-  - Click Save 
+#### Step by step:
+- Navigate to to the github repository 'Settings' tab
+- Select 'Pages' in the left side menu
+- Under "Build and deployment" - "Branch"; Select 'Main' in the 'Select branch' drop-down menu.
+- Click Save 
 
 A green banner displays with a live link when deployment and build is finished.
 This is the live link for the deployed page - https://jensbrauer.github.io/rockpaperscissors/
