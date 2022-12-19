@@ -36,34 +36,32 @@ With the sites colorful responses and screenupdates, users can hover over the sc
 ![Score Card](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/scorecard.PNG)
 
 - __Game Section__ 
-
   - The game section is where users can interact with the game flow itself.
 
 ![Game Area](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/gamearea.PNG)
 
-#### Players Choice Section
+- __Players Choice Section__
   - Clearly displaying the interactive elements in another warm orange color that expand on hover. The functionality of the interactive elements are also clarified with associated text-elements and icons that should remind anyone familiar with the game of the hand signs normaly used in real life. Furthermore, the headings guide the user to understand where their choice should be inputed.
 
 ![Players Choice](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/playerschoice.PNG)
 
-#### Message line
-  - Seperating the players choice and the computers choice areas, is a message line where the round results are messaged; "Computer wins the round", "You win the round" or "It is a draw".
+- __Message line__
+  - Seperating the players choice and the computers choice areas, is a message line where the round results are messaged; "Computer wins the round", "You win the round" or "It is a draw". (See image under Game Section above)
 
-#### Computers Choice Section
+- __Computers Choice Section__
   - Underneath, a computers choice section is interconnected but with a colder blue/green color on no on-hover effect. It is displayed with the laptop icon and a "To Be Announced" text tag as well as a "Computers Choice", to show the user that the oponent's(the computer's) respons will be displayed there.
 ![Computers Choice](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/computerschoice.PNG)
 
   - To the bottom right of the game-section, a "next-round" button pops at the end of a round before game is over. In order to allow the user to initiate next round at will instead of automatically.
 ![Next Round](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/nextround.PNG)
 
-#### Game Flow Scenarios
+- __Game Flow Scenarios__
   - At the end of each round, when choises are evaluated. The button that the player clicked and chose, as well at the pseudo-button for the computer choice display, will light up in green, yellow or red colors based on the results of the round. I. e. The loosers choice turns red, the winners choice turns green and at a draw - both are colored in yellow.
   ![Round Over](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/roundend.PNG)
 
   - At the end of the game (game over scenario), the complete gamesection is grayscaled to 70% in order to more effectively lead the users attention to the Score Card section where game results are displayed. Furthermore, no "next round" button is displayed and instead, "Start new game" button must be clicked in order to activate more game play.
   ![Game Over Scenario](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/gameover.PNG)
 
-For some/all of your features, you may choose to reference the specific project files that implement them.
 
 ### Features Left to Implement
 
@@ -76,41 +74,47 @@ For some/all of your features, you may choose to reference the specific project 
 ### Manual Testing
 #### Manual testing by myself, conducted on deployed version resulted in the following:
 
-- CSS bugs found and addressed
+- All onclick functions were tested and confirmed to function as intended
+- All on CSS pseudoclasses were tested and confirmed to function as intended
+- All game scenarios were tested and confirmed to function as intended
+- Readability was tested and confirmed to function as intended
+- Responsiveness was tested and confirmed to function as intended
+
+- __CSS bugs found and addressed__
   - The button with id="paper-button" in the players choice area caused the whole players area to expand downwards on hover.
     - The div with id="game-center" was given a fixed height, large enough to fit content.
   - The Computer Display pseudo button in the Computers choice area was slightly pushed to the left and did not align with middle button of Players Choice area.
     - An empty div with the same CSS as the left Choice Button area in the Players Choice area in order to push it into alignment.
-- JS bugs found and addressed:
+- __JS bugs found and addressed:__
   - The "next round"-button appeared even though Game scenario was "Game Over".
     - Corrected in the js file by adding element.style.visibility = 'hidden' to function gameIsOver()
   - The "Players Choice" buttons remained clickable in Game Over scenario.
     - The function isGameOver() was updated to use element.textContent = 'TBA' on the computerMsg variable referencing the div id="computer-msg-center", in order to determin whether or round was played or finished.
-- HTML bugs found and addressed:
+- __HTML bugs found and addressed:__
   - No players choice buttons would fire onclick functions until "new game" button was clicked.
     - The original html element did not contain the correct element.textContent that the condition looked for in js function isRoundActive(). It was updated and bug was corrected.
 
 #### Live link was shared with friends and no further bugs or problems was detected.
 
-The site was tested on the following devices
-- Android Oneplus 7
-- Iphone SE 2022
-- HP Elitebook 13"
+- __The site was tested on the following devices__
+  - Android Oneplus 7
+  - Iphone SE 2022
+  - HP Elitebook 13"
 
-The site was tested on the following web browser
-- Mozilla Firefox
-- Windows Edge
-- Google Chrome
-- Safari
+- __The site was tested on the following web browser__
+  - Mozilla Firefox
+  - Windows Edge
+  - Google Chrome
+  - Safari
 
 
 ### Validator Testing 
 
-- HTML
+- __HTML__
   - [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjensbrauer.github.io%2Frockpaperscissors%2F) highlighted no errors in the HTML.
-- CSS
+- __CSS__
   - [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjensbrauer.github.io%2Frockpaperscissors%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv#css) highlighted no errors in the CSS.
-- JavaScript
+- __JavaScript__
   - [JSHint](https://jshint.com/) Returned 24 warnings about the JavaScript code. These warnings were all one of the following warnings;
     - 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
     - 'template literal syntax' is only available in ES6 (use 'esversion: 6').
@@ -131,29 +135,26 @@ Performance issues are unnoticed in manual testing and therefore unattended to.
 - Performance issues caught by lighthouse are unattended to.
 
 - An unwanted feature is the the next round button rendering weirdly.
-  - When clicked, JS function is hiding it by changing element.style.visibility = 'hidden',
-it does not instantly disappear but fades a little and then instantly disappears.
-With another method, this could probably be solved better.
+  - When clicked, JS function is hiding it by changing element.style.visibility = 'hidden', it does not instantly disappear but fades a little and then instantly disappears. With another method, this could probably be solved better.
 
 ## Deployment
 
-The finalized version of the website was deployed on GitHub pages, step by step;
-
-- Navigate to to the github repository 'Settings' tab
-- Select 'Pages' in the left side menu
-- Under "Build and deployment" - "Branch"; Select 'Main' in the 'Select branch' drop-down menu.
-- Click Save 
+### The finalized version of the website was deployed on GitHub pages.
+- __Step by step:__
+  - Navigate to to the github repository 'Settings' tab
+  - Select 'Pages' in the left side menu
+  - Under "Build and deployment" - "Branch"; Select 'Main' in the 'Select branch' drop-down menu.
+  - Click Save 
 
 A green banner displays with a live link when deployment and build is finished.
-
 This is the live link for the deployed page - https://jensbrauer.github.io/rockpaperscissors/
 
 
 ## Credits 
 
-Gareth McGirr mentored this project and provided valuable feedback on graphical design and content.
+__Gareth McGirr__ mentored this project and provided valuable feedback on graphical design and content.
 
-Arvid Burström helped test this website and provided feedback on how to structure code in game development.
+__Arvid Burström__ helped test this website and provided feedback on how to structure code in game development.
 
 To better understand the JSHint warning messages on ES6 i read [W3Schools](https://www.w3schools.com/js/js_es6.asp) in order to understand how I wanted to proceed.
 
