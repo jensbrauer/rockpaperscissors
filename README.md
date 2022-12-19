@@ -19,27 +19,32 @@ With the sites colorful responses and screenupdates, users can hover over the sc
   - The "close-instructions" button is displayed in yellow to show users how to proceed to the game when ready.
   
 
-![Landing Page](#)
+![Landing Page](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/landingpage.PNG)
 
 - __Header__
 
   - The header is built to effectively display the purpose of this one-page site with the title ROCK PAPER SCISSORS clearly stated in black and white. 
   - It also provides a small button with a link back to the Instructions. This is mainly in black and white theme not to draw unnecessary attention, but with an orange info-icon and an on-hover css feature in order to convey the interactivity to the user.
 
-![Header](#)
+![Header](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/header.PNG)
 
 - __Score Card__
 
   - The Score Card section allows the user to monitor the progression of the game. It's default styling is in greyscale, and the table displaying the scores light up in green or red color when game is over to alert the user to the end results.
   - Next to the score table is an interactive element colored in a pale orange color that enables the user to start a new game at any point in the game flow.
 
-![Score Card](#)
+![Score Card](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/scorecard.PNG)
 
 - __Game Section__ 
 
   - The game section is where users can interact with the game flow itself.
+
+![Game Area](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/gamearea.PNG)
+
 #### Players Choice Section
   - Clearly displaying the interactive elements in another warm orange color that expand on hover. The functionality of the interactive elements are also clarified with associated text-elements and icons that should remind anyone familiar with the game of the hand signs normaly used in real life. Furthermore, the headings guide the user to understand where their choice should be inputed.
+
+![Players Choice](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/playerschoice.PNG)
 
 #### Message line
   - Seperating the players choice and the computers choice areas, is a message line where the round results are messaged; "Computer wins the round", "You win the round" or "It is a draw".
@@ -48,11 +53,15 @@ With the sites colorful responses and screenupdates, users can hover over the sc
   - Underneath, a computers choice section is interconnected but with a colder blue/green color on no on-hover effect. It is displayed with the laptop icon and a "To Be Announced" text tag as well as a "Computers Choice", to show the user that the oponent's(the computer's) respons will be displayed there.
   - To the bottom right of the game-section, a "next-round" button pops at the end of a round before game is over. In order to allow the user to initiate next round at will instead of automatically.
 
+![Computers Choice](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/computerschoice.PNG)
+![Next Round](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/nextround.PNG)
+
 #### Game Flow Scenarios
   - At the end of each round, when choises are evaluated. The button that the player clicked and chose, as well at the pseudo-button for the computer choice display, will light up in green, yellow or red colors based on the results of the round. I. e. The loosers choice turns red, the winners choice turns green and at a draw - both are colored in yellow.
   - At the end of the game (game over scenario), the complete gamesection is grayscaled to 70% in order to more effectively lead the users attention to the Score Card section where game results are displayed. Furthermore, no "next round" button is displayed and instead, "Start new game" button must be clicked in order to activate more game play.
 
-![Game Section](#)
+![Game Section](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/gamearea.PNG)
+![Game Over Scenario](https://github.com/jensbrauer/rockpaperscissors/blob/main/docs/readme_images/gameover.PNG)
 
 For some/all of your features, you may choose to reference the specific project files that implement them.
 
@@ -65,7 +74,8 @@ For some/all of your features, you may choose to reference the specific project 
 ## Testing 
 
 ### Manual Testing
-#### Manual testing conducted on deployed version - Tested myself and shared live link with 3 friends to scan for bugs.
+#### Manual testing by myself, conducted on deployed version resulted in the following:
+
 - CSS bugs found and addressed
   - The button with id="paper-button" in the players choice area caused the whole players area to expand downwards on hover.
     - The div with id="game-center" was given a fixed height, large enough to fit content.
@@ -80,7 +90,8 @@ For some/all of your features, you may choose to reference the specific project 
   - No players choice buttons would fire onclick functions until "new game" button was clicked.
     - The original html element did not contain the correct element.textContent that the condition looked for in js function isRoundActive(). It was updated and bug was corrected.
 
-#### Feedback from friends
+#### Live link was shared with friends and no further bugs or problems was detected.
+
 The site was tested on the following devices
 - Android Oneplus 7
 - Iphone SE 2022
@@ -91,8 +102,6 @@ The site was tested on the following web browser
 - Windows Edge
 - Google Chrome
 - Safari
-
-No Bugs or problems was detected in regards to the responsiveness of the website.
 
 
 ### Validator Testing 
@@ -112,7 +121,7 @@ No Bugs or problems was detected in regards to the responsiveness of the website
 ### Lighthouse Report
 
 Lighthouse report was run multiple times with varying performance score as low as 83.
-Performance issues are unnoticed in manual testing an unattended to.
+Performance issues are unnoticed in manual testing and therefore unattended to.
 
 ![Landing Page](#)
 
@@ -121,8 +130,8 @@ Performance issues are unnoticed in manual testing an unattended to.
 
 - Performance issues caught by lighthouse are unattended to.
 
-- Another issue is the the next round button that renders weirdly.
-  - When clicked and JS function is hiding it by changing element.style.visibility = 'hidden',
+- An unwanted feature is the the next round button rendering weirdly.
+  - When clicked, JS function is hiding it by changing element.style.visibility = 'hidden',
 it does not instantly disappear but fades a little and then instantly disappears.
 With another method, this could probably be solved better.
 
@@ -142,15 +151,12 @@ This is the live link for the deployed page - https://jensbrauer.github.io/rockp
 
 ## Credits 
 
+Gareth McGirr mentored this project and provided valuable feedback on graphical design and content.
 
+Arvid Burström helped test this website and provided feedback on how to structure code in game development.
 
-In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-
-You can break the credits section up into Content and Media, depending on what you have included in your project. 
+To better understand the JSHint warning messages on ES6 i read [W3Schools](https://www.w3schools.com/js/js_es6.asp) in order to understand how I wanted to proceed.
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
+- The icons used for buttons and display areas were taken from [Font Awesome](https://fontawesome.com/)
