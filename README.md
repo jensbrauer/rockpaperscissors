@@ -72,7 +72,7 @@ With the sites colorful responses and screenupdates, users can hover over the sc
 ## Testing 
 
 ### Manual Testing
-#### Manual testing by myself, conducted on deployed version resulted in the following:
+#### Manual testing by myself
 
 - All onclick functions were tested and confirmed to function as intended
 - All on CSS pseudoclasses were tested and confirmed to function as intended
@@ -94,7 +94,8 @@ With the sites colorful responses and screenupdates, users can hover over the sc
 - No players choice buttons would fire onclick functions until "new game" button was clicked.
   - The original html element did not contain the correct element.textContent that the condition looked for in js function isRoundActive(). It was updated and bug was corrected.
 
-#### Live link was shared with friends and no further bugs or problems was detected.
+#### Live link was shared with friends
+- No further bugs or problems was detected.
 
 #### The site was tested on the following devices
 - Android Oneplus 7
@@ -151,9 +152,9 @@ This is the live link for the deployed page - https://jensbrauer.github.io/rockp
 
 ## Credits 
 
-__Gareth McGirr__ mentored this project and provided valuable feedback on graphical design and content.
+[Gareth McGirr](https://github.com/Gareth-McGirr) mentored this project and provided valuable feedback on graphical design and content.
 
-__Arvid Burström__ helped test this website and provided feedback on how to structure code in game development.
+[Arvid Burström](https://www.linkedin.com/in/arvid-burstrom-21684a64/) in order to understand how I wanted to proceed. helped test this website and provided feedback on how to structure code in game development.
 
 To better understand the JSHint warning messages on ES6 i read [W3Schools](https://www.w3schools.com/js/js_es6.asp) in order to understand how I wanted to proceed.
 
